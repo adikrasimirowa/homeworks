@@ -1,0 +1,22 @@
+
+<<!DOCTYPE html>
+<html>
+<head>
+	<title>Subitiq</title>
+</head>
+<body>
+<form action="events.php" method="get">
+	<input type="radio" name="kategoria" value="Muzika"> Muzika
+	<input type="radio" name="kategoria" value="Kino"> Kino
+	<input type="radio" name="kategoria" value="Teatur"> Teatur
+	<select name="city">
+		<option>Vratsa</option>
+		<option>Mezdra</option>
+		<option>Sofia</option>
+	</select>
+<input type="submit" name="Send" value="View Events">
+    
+</form>
+</body>
+</html>
+
