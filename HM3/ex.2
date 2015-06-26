@@ -1,0 +1,33 @@
+
+<html> 
+<form action="form.php" method="post">
+Username:<input type="text" name="username">
+</br>
+E-mail:<input type="text" name="email">
+</br>
+Password: <input type="text" name="user">
+Interesi:
+<input type="checkbox" name="interests[]" value="Muzika"> Muzika
+<input type="checkbox" name="interests[]" value="Sport"> Sport
+<input type="checkbox" name="interests[]" value="Nauka"> Nauka
+<input type="checkbox" name="interests[]" value="Turizum"> Turizum
+	<input type="submit" name="send" value="send">
+</form>
+</html>
+<?php
+if(!empty($_POST))
+{
+$email=$_POST['email'];
+		if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+			echo 'Nevaliden email!';
+}
+else
+	{$user = $_POST["username"];
+$interests = implode(', ', $_POST['interests']);
+	
+      		echo $user  ." se registrira uspeshno!Interesite na ".$user." sa ".$interests;
+	}
+}
+
+
+?>
