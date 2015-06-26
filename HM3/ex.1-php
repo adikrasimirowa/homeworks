@@ -1,0 +1,52 @@
+<?php
+if(!empty($_GET))
+{
+	$_GET['kategoria'];
+	$kat=$_GET['kategoria'];
+	$_GET['city'];
+	$cit=$_GET['city'];
+	if ($kat=="Muzika" && $cit=="Vratsa")
+	{ 
+		echo "Vola Open Air 2015.";
+	}
+	elseif ($kat=="Kino" && $cit=="Vratsa") {
+
+		echo "TED 2";
+	}
+	elseif ($kat=="Teatur" && $cit=="Vratsa") {
+
+		echo "Kolega
+
+28 Juni (Nedelq), 19:00";
+	}
+	elseif ($kat=="Kino" && $cit=="Sofia") {
+
+		echo "Jurassic World 
+		Cinemax 18.50";
+	}
+	elseif ($kat=="Music" && $cit=="Sofia") {
+
+		echo "Slavi Trifonov Concert September 2015";
+	}
+	elseif ($kat=="Teatur" && $cit=="Sofia") {
+
+		echo "S Lubovta shega ne biva 26.06.15 19:00";
+	}
+	elseif ($kat=="Kino" && $cit=="Mezdra") {
+
+		echo "Otvutre navun cinema Roylal-Mezdra 01.07.15 18.50";
+
+	}
+	elseif ($kat=="Music" && $cit=="Mezdra") {
+
+		echo "RockFest 19.05.16 18.00 ";
+		
+	}
+	elseif ($kat=="Teatur" && $cit=="Mezdra") {
+
+		echo "Agent 23.08.15 Dom na jeliznichara 20.00";
+		
+	}
+}
+	
+?>
