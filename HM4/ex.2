@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+ <form action="4-2.php" method="get">
+ Type x:<input type="text" name="x"> 
+ </br>
+ Type y: <input type="text" name="y">
+ 	<input type="submit" name="Send" value="Send">
+
+ </form>
+</body>
+</html>
+
+
+<?php
+if (!empty($_GET))
+{
+	
+$x=$_GET['x'];
+$y=$_GET['y'];
+if ($x>$y)
+{
+	 while ( $x>$y) {
+	 	$y++;
+	 	if ($y%7==0) {
+	 		echo "$y";
+	 		
+	 	}
+		}
+	}
+	elseif ($x<$y) {
+		while ( $x<$y) {
+	 	$x++;
+	 	if ($x%7==0) {
+	 		echo "$x";
+	 		
+	 	}
+	 }
+			
+      $x++;
+		
+	}
+  
+  
+	
+}
+
+
+?>
