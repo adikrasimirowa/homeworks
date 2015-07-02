@@ -1,0 +1,31 @@
+<?php
+$pokupki= array('Bluza' => 30, 'Potnik'=> 6,'Pantalon'=>20, 'Pola'=>25, 'Roklq'=>50);
+$max=$pokupki["Bluza"];
+$max2=$pokupki["Bluza"];
+
+foreach($pokupki as $key => $value)
+{
+	echo "$key-$value</br>";
+	
+	}
+
+	if ($max<$value) 
+	{
+		$max=$value;
+		echo "Max is $max";
+	}
+	elseif ($max2>$value) {
+     $max2=$value;
+	
+	}
+	unset($pokupki[$max]);
+	
+	
+	foreach($pokupki as $key => $value)
+{
+     if($max2<$value)
+	{
+		$max2=$value; 
+		echo "Second biggest  is $max2";}
+	}
+?>
