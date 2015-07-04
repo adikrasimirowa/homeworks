@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+ <form action="5-1.php" method="get">
+ Type x:<input type="text" name="x"> 
+ </br>
+ Type y: <input type="text" name="y">
+ 	<input type="submit" name="Send" value="Send">
+
+ </form>
+</body>
+</html>
+
+
+<?php
+if (!empty($_GET))
+{
+	
+$x=$_GET['x'];
+$y=$_GET['y'];
+if ($x>$y)
+{
+	  for ($y=1; $y<=$x; $y++) 
+	  {
+	 	if ($y%7==0) {
+	 		echo "$y";
+	 		
+	 	}
+		}
+	}
+	elseif ($x<$y) {
+		for ($x=1; $x <=$y; $x++) {
+	 	if ($x%7==0) {
+	 		echo "$x";
+	 		
+	 	}
+	 }
+			
+      $x++;
+		
+	}
+  
+  
+	
+}
+
+
+?>
