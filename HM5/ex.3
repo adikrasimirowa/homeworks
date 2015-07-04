@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+ <form action="5-3.php" method="get">
+ Type m: <input type="text" name="m">
+ Type n: <input type="text" name="n">
+ 	<input type="submit" name="Send" value="Send">
+
+ </form>
+</body>
+</html>
+
+
+<?php
+if (!empty($_GET))
+{
+	
+$m=$_GET['m'];
+$n=$_GET['n'];
+echo "<table border='1px'>";
+
+for($i=1; $i<=$m; $i++) 	
+{echo "<tr>";
+	
+	for($j=1;$j<=$n;$j++) 
+   {
+	 echo "<td>$j </td>";
+
+	}echo "</tr>";
+
+		
+}
+echo "</table>";
+}
+
+?>
