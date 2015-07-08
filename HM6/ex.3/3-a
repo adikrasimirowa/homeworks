@@ -1,0 +1,22 @@
+<?php
+$num=0;
+$ch=array( array());
+echo "<table border='1px'>";
+for ($i=0; $i <3; $i++) { 
+
+	for ($j=0; $j<4; $j++) { 
+		$ch[$i][$j]=$num+5;
+		$num++;
+		
+	}
+}
+echo "<tr>";
+for ($i=0; $i <3 ; $i++) { 
+	for ($j=0; $j<4; $j++) { 
+		echo"<td>" .$ch[$i][$j]. ' '."</td>";
+	}
+echo "</tr>";}
+
+echo "</table>";
+
+?>
