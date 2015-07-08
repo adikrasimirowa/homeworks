@@ -1,0 +1,50 @@
+<?php
+$num=1;
+$num1=-5;
+$num2=1;
+$num3=-23;
+$ch=array( array());
+echo "<br/>";
+echo "<table border='1px'>";
+for ($i=0; $i <4; $i++) { 
+
+	for ($j=0; $j<4; $j++) { 
+		$ch[$i][$j]=$num;
+		$num++;
+
+	}
+}
+for ($i=0; $i <4; $i++) { 
+
+	for ($j=0; $j<4; $j++) { 
+		$ch[1][$j]=$num1-15;
+		$num1++;
+
+
+	}
+}
+for ($i=0; $i <4; $i++) { 
+
+	for ($j=0; $j<4; $j++) { 
+		$ch[2][$j]=$num2-3;
+		$num2++;
+	}
+}
+for ($i=0; $i <4; $i++) { 
+
+	for ($j=0; $j<4; $j++) { 
+		$ch[3][$j]=$num3-15;
+		$num3++;
+	}
+}
+
+echo "<tr>";
+for ($i=0; $i <4 ; $i++) { 
+	for ($j=0; $j<4; $j++) { 
+		echo"<td>" .$ch[$i][$j]. ' '."</td>";
+	}
+echo "</tr>";}
+
+echo "</table>";
+
+?>
