@@ -1,0 +1,14 @@
+<?php
+
+$n=array();
+function num()
+{
+	for ($i=0; $i <32 ; $i++) { 
+		$n[$i]=42-$i;
+		echo "$n[$i]";
+	}
+}
+
+num();
+
+?>
