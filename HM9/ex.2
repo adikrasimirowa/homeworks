@@ -27,27 +27,40 @@ $p="SELECT * FROM dlops WHERE date_deleted IS NOT NULL";
 
 $result=mysqli_query($conn, $p);
 echo "<table class='table table-bordered'>";
+echo "<tr> <td> No.</td>
+<td> First name</td>
+<td> Last name</td>
+<td> Race </td>
+<td> Gender</td>
+<td> Date of birth </td>
+<td> Weight </td>
+<td> Status </td>
+</tr>";
+
 
 if (mysqli_num_rows($result)>0) {
 	while ($row= mysqli_fetch_assoc($result)) {
-	
+		
 		echo "<tr>";
-	echo " 
-	<td> $row[first_name] </td> 
+		echo " 
+		<td> $row[id] </td>
+		<td> $row[first_name] </td>
 	<td> $row[last_name] </td>
 	<td> $row[race]</td>
 	<td>  $row[gender] </td>
 	<td> $row[date_of_birth] </td>
 	<td> $row[weight] </td>
-	<td> $row[status] </td>";
+	<td> $row[status] </td>
+	<td> <button type='button' class='btn btn-info' >Edit</button> </td>
+	<td> <button type='button' class='btn btn-danger'>Delete</button> </td>
+	";
 		echo "</tr>";
+
 	 } 
 	
 }
 echo "</table>";
-
+echo "<button type='button' class='btn btn-success'>Add Dolp</button>";
 
 
 ?>
-</body>
-</html>
