@@ -1,0 +1,53 @@
+<<!DOCTYPE html>
+<html>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<body>
+<?php
+//Create connection
+ $conn=mysqli_connect('localhost','root','','dlopia');
+ 
+//Check conection
+ if (!$conn)
+ {
+ die ("Connection failed: ". mysqli_connect_error());
+ }
+echo "Connected syccessfully </br/>";
+echo "<br/>";
+
+
+$p="SELECT * FROM dlops WHERE date_deleted IS NOT NULL";
+
+$result=mysqli_query($conn, $p);
+echo "<table class='table table-bordered'>";
+
+if (mysqli_num_rows($result)>0) {
+	while ($row= mysqli_fetch_assoc($result)) {
+	
+		echo "<tr>";
+	echo " 
+	<td> $row[first_name] </td> 
+	<td> $row[last_name] </td>
+	<td> $row[race]</td>
+	<td>  $row[gender] </td>
+	<td> $row[date_of_birth] </td>
+	<td> $row[weight] </td>
+	<td> $row[status] </td>";
+		echo "</tr>";
+	 } 
+	
+}
+echo "</table>";
+
+
+
+?>
+</body>
+</html>
