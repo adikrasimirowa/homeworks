@@ -1,0 +1,11 @@
+Б) Да се напишат заявки за:
+-	Извлича всички потребители под 25 години със средно образование.
+SELECT*FROM 'users' WHERE age<25 AND education='secondary'
+-	Извлича музикални канали от жанр “pop”.
+SELECT*FROM 'ganres' WHERE type='pop'
+-	Извлича всички канали, които съдържат в залгавието си ‘Krisko’.
+SELECT*FROM 'channels' WHERE channel='Krisko'
+-	Увеличава възрастта на всички потребители родени на днешна дата с 1 година.
+UPDATE 'users' SET age=age+1 WHERE date_born='...'
+-	Добавя нов канал в базата данни
+INSERT INTO `channels`(`channel`, `num_of_users`, `num_of_songs`) VALUES ('bonjovi',200,50)
